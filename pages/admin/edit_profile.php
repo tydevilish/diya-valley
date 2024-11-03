@@ -113,7 +113,7 @@
                         <div id="notificationDropdown" class="hidden absolute right-0 top-full mt-2 w-80 bg-white rounded-lg shadow-xl z-50">
                             <div class="p-4">
                                 <div class="space-y-4">
-                                    <a href="payment" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors">
+                                    <a href="payment.php" class="block p-3 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors">
                                         <div class="flex items-center">
                                             <div class="flex-shrink-0">
                                                 <svg class="w-6 h-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
