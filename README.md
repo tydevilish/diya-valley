@@ -10,3 +10,11 @@
 - HTML/CSS
 - Tailwind CSS
 - JavaScript
+
+## Database Create
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('users', 'admin', 'group') NOT NULL
+);
