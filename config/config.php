@@ -37,13 +37,13 @@ class Login extends connection
     {
         switch ($role) {
             case 'users':
-                header('Location: users');
+                header('Location: ./pages/users/users.php');
                 break;
             case 'admin':
-                header('Location: admin');
+                header('Location: ./pages/admin/admin.php');
                 break;
             case 'group':
-                header('Location: group');
+                header('Location: ./pages/admin/group.php');
                 break;
             default:
                 $this->redirectWithError('ไม่พบหน้าที่ถูกต้องสำหรับบทบาทนี้');

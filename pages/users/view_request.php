@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| ระบบบริหารงาน </title>
+    <title>| ระบบจัดการหมู่บ้าน </title>
     <link rel="icon" href="https://devcm.info/img/favicon.png">
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="../../src/style_fix.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white">
+<body class="bg-modern">
     <div class="flex">
         <div id="sidebar" class="fixed top-0 left-0 h-full w-20 hover:w-64 group transition-all duration-300 ease-in-out bg-gradient-to-b from-blue-600 to-blue-500 shadow-xl">
             <div class="flex flex-col h-full">
@@ -34,7 +34,7 @@
                     <div class="mb-4">
                         <h2 class="text-xs font-bold text-white/80 px-4 mb-2">Menu</h2>
                         <nav class="space-y-2">
-                            <a href="users" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <a href="users.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                                     <polyline points="9 22 9 12 15 12 15 22" />
@@ -42,7 +42,7 @@
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">หน้าหลัก</span>
                             </a>
 
-                            <a href="#" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <a href="payment.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="2" y="5" width="20" height="14" rx="2" />
                                     <line x1="2" y1="10" x2="22" y2="10" />
@@ -50,11 +50,21 @@
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">ชำระค่าส่วนกลาง</span>
                             </a>
 
-                            <a href="request" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <a href="request.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
                                 </svg>
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">การแจ้งซ่อม</span>
+                            </a>
+                            <a href="#" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                                <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                                </svg>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">รายละเอียดการแจ้งซ่อม</span>
                             </a>
                         </nav>
                     </div>
@@ -63,14 +73,14 @@
                     <div class="mb-4">
                         <h2 class="text-xs font-bold text-white/80 px-4 mb-2">Others</h2>
                         <nav class="space-y-2">
-                            <a href="edit_profile" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <a href="edit_profile.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
                                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                 </svg>
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">แก้ไขโปรไฟล์</span>
                             </a>
 
-                            <a href="logout" class="flex items-center px-4 py-2.5 text-white bg-red-400 hover:bg-red-500 rounded-lg transition-all duration-200">
+                            <a href="../../logout.php" class="flex items-center px-4 py-2.5 text-white bg-red-400 hover:bg-red-500 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                                     <polyline points="16 17 21 12 16 7"></polyline>
@@ -90,7 +100,7 @@
         <!-- Top Navigation -->
         <nav class="bg-white shadow-sm px-6 py-3">
             <div class="flex items-center justify-between">
-                <h1 class="text-2xl font-bold text-eva">ชำระค่าส่วนกลาง</h1>
+                <h1 class="text-2xl font-bold text-eva">รายละเอียดการแจ้งซ่อม</h1>
                 <div class="flex items-center space-x-4">
                     <div class="relative">
                         <button class="p-2 rounded-full hover:bg-gray-100 relative" onclick="toggleNotifications()">
@@ -150,42 +160,35 @@
 
         <!-- Payment Table Section -->
         <div class="p-6">
+
+            <!-- ตารางแสดงข้อมูล -->
             <div class="bg-white rounded-lg shadow-sm">
                 <div class="overflow-x-auto">
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                             <tr>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ลำดับ</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">วันที่</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">รายละเอียด</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">จำนวนเงิน (บาท)</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">วันที่แจ้ง</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">บ้านเลขที่</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ผู้แจ้ง</th>
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ประเภท</th>
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">สถานะ</th>
                                 <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">การกระทำ</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
+                            <!-- แสดงเฉพาะรายการที่รอดำเนินการ -->
                             <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">1</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01/03/2024</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">ค่าส่วนกลางประจำเดือนมีนาคม 2567</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">500.00</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01/03/2024 09:30</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">123/1</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">นายสมชาย ใจดี</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">ไฟฟ้า</td>
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">รอชำระเงิน</span>
+                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                        รอดำเนินการ
+                                    </span>
                                 </td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    <button onclick="showModal()" class="text-blue-600 hover:text-blue-900 mr-3">ชำระเงิน</button>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">2</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">01/02/2024</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">ค่าส่วนกลางประจำเดือนกุมภาพันธ์ 2567</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">500.00</td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">ชำระแล้ว</span>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    <button onclick="showDetailModal()" class="text-gray-600 hover:text-gray-900">รายละเอียด</button>
+                                    <button onclick="showDetailModal('1')" class="text-blue-600 hover:text-blue-900">ดูรายละเอียด</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -195,65 +198,12 @@
         </div>
     </div>
 
-    <!-- Payment Modal -->
-    <div id="paymentModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50 flex items-center justify-center">
-        <div class="relative p-5 border w-full max-w-lg shadow-lg rounded-md bg-white mx-4">
-            <div class="mt-3">
-                <div class="flex justify-between items-center pb-3">
-                    <h3 class="text-lg leading-6 font-bold text-blue-500">ชำระเงิน</h3>
-                    <button onclick="closeModal()" class="text-gray-400 hover:text-gray-500">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                </div>
-
-                <div>
-                    <div class="bg-gray-50 p-3 rounded-lg mb-4">
-                        <ul class="space-y-2 text-sm">
-                            <li>ธนาคารกสิกรไทย: 123-4-56789-0</li>
-                            <li>ธนาคารไทยพาณิชย์: 098-7-65432-1</li>
-                            <li>พร้อมเพย์: 089-123-4567</li>
-                        </ul>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
-                            อัพโหลดสลิปการโอนเงิน
-                        </label>
-                        <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
-                            <div class="space-y-1 text-center">
-                                <img id="previewImage" class="hidden mx-auto h-32 object-cover mb-3">
-                                <div class="flex text-sm text-gray-600">
-                                    <label for="slip" class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500">
-                                        <span>อัพโหลดไฟล์</span>
-                                        <input id="slip" name="slip" type="file" class="sr-only" accept="image/*" onchange="previewSlip(event)">
-                                    </label>
-                                </div>
-                                <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="flex justify-end space-x-3">
-                        <button onclick="closeModal()" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400">
-                            ปิด
-                        </button>
-                        <button id="confirmPayment" onclick="submitPayment()" class="px-4 py-2 bg-gray-300 text-gray-500 rounded-md cursor-not-allowed" disabled>
-                            ยืนยันการชำระเงิน
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Detail Modal -->
-    <div id="detailModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50 flex items-center justify-center">
-        <div class="relative p-5 border w-full max-w-lg shadow-lg rounded-md bg-white mx-4">
-            <div class="mt-3">
-                <div class="flex justify-between items-center pb-3">
-                    <h3 class="text-lg leading-6 font-bold text-blue-500">รายละเอียดการชำระเงิน</h3>
+    <!-- Modal แสดงรายละเอียดการแจ้งซ่อม -->
+    <div id="detailModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+        <div class="flex items-center justify-center min-h-screen px-4">
+            <div class="relative p-8 bg-white w-full max-w-lg rounded-lg shadow-xl">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-xl font-bold text-gray-900">รายละเอียดการแจ้งซ่อม</h3>
                     <button onclick="closeDetailModal()" class="text-gray-400 hover:text-gray-500">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -261,28 +211,45 @@
                     </button>
                 </div>
 
-                <div>
-                    <div class="bg-gray-50 p-4 rounded-lg mb-4">
-                        <div class="grid grid-cols-2 gap-4 text-sm">
-                            <div class="text-gray-600">วันที่ชำระ:</div>
-                            <div class="font-medium">01/02/2024 10:30</div>
-                            <div class="text-gray-600">จำนวนเงิน:</div>
-                            <div class="font-medium">500.00 บาท</div>
-                            <div class="text-gray-600">ช่องทางการชำระ:</div>
-                            <div class="font-medium">โอนผ่านธนาคารกสิกรไทย</div>
-                        </div>
+                <div class="bg-gray-50 p-4 rounded-lg mb-4">
+                    <div class="grid grid-cols-2 gap-4 text-sm">
+                        <div class="text-gray-600">วันที่แจ้ง:</div>
+                        <div class="font-medium">01/03/2024 09:30</div>
+                        <div class="text-gray-600">บ้านเลขที่:</div>
+                        <div class="font-medium">123/1</div>
+                        <div class="text-gray-600">ผู้แจ้ง:</div>
+                        <div class="font-medium">นายสมชาย ใจดี</div>
+                        <div class="text-gray-600">เบอร์โทรติดต่อ:</div>
+                        <div class="font-medium">081-234-5678</div>
+                        <div class="text-gray-600">ประเภท:</div>
+                        <div class="font-medium">ไฟฟ้า</div>
+                        <div class="text-gray-600">สถานะ:</div>
+                        <div class="font-medium">รอดำเนินการ</div>
                     </div>
+                </div>
 
-                    <div class="mb-4">
-                        <label class="block text-sm font-medium text-gray-700 mb-2">
-                            สลิปการโอนเงิน
-                        </label>
-                        <div class="mt-1 flex justify-center">
-                            <img src="https://img2.pic.in.th/pic/462554817_573567848662882_2984175964874345892_n.jpg" alt="สลิปการโอนเงิน" class="max-h-64 rounded-lg shadow-sm">
-                        </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        รายละเอียดปัญหา
+                    </label>
+                    <p class="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg">
+                        ปลั๊กไฟฟ้าลัดวงจร ช็อตจนละลาย
+                    </p>
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        รูปภาพประกอบ
+                    </label>
+                    <div class="mt-1 flex justify-center">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/images-1bfdbf256ae93a672.jpeg"
+                            alt="รูปภาพปัญหา"
+                            class="max-h-64 rounded-lg shadow-sm">
                     </div>
+                </div>
 
-                    <div class="flex justify-end">
+                <div class="border-t pt-4">
+                    <div class="flex justify-end items-center">
                         <button onclick="closeDetailModal()" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400">
                             ปิด
                         </button>
@@ -293,48 +260,18 @@
     </div>
 
     <script>
-        function showModal() {
-            document.getElementById('paymentModal').classList.remove('hidden');
-        }
-
-        function closeModal() {
-            document.getElementById('paymentModal').classList.add('hidden');
-            document.getElementById('previewImage').classList.add('hidden');
-            document.getElementById('slip').value = '';
-            document.getElementById('confirmPayment').disabled = true;
-            document.getElementById('confirmPayment').classList.add('bg-gray-300', 'text-gray-500', 'cursor-not-allowed');
-            document.getElementById('confirmPayment').classList.remove('bg-blue-600', 'text-white', 'hover:bg-blue-700');
-        }
-
-        function previewSlip(event) {
-            const file = event.target.files[0];
-            const previewImage = document.getElementById('previewImage');
-            const confirmButton = document.getElementById('confirmPayment');
-
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    previewImage.src = e.target.result;
-                    previewImage.classList.remove('hidden');
-                    confirmButton.disabled = false;
-                    confirmButton.classList.remove('bg-gray-300', 'text-gray-500', 'cursor-not-allowed');
-                    confirmButton.classList.add('bg-blue-600', 'text-white', 'hover:bg-blue-700');
-                }
-                reader.readAsDataURL(file);
-            }
-        }
-
-        function submitPayment() {
-            alert('ส่งข้อมูลการชำระเงินเรียบร้อย');
-            closeModal();
-        }
-
-        function showDetailModal() {
+        function showDetailModal(id) {
             document.getElementById('detailModal').classList.remove('hidden');
         }
 
         function closeDetailModal() {
             document.getElementById('detailModal').classList.add('hidden');
+        }
+
+        function updateStatus(status) {
+            // จำลองการอัพเดทสถานะ
+            alert('อัพเดทสถานะเรียบร้อย');
+            closeDetailModal();
         }
     </script>
 </body>

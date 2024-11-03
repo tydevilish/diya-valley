@@ -1,19 +1,12 @@
-<?php
-session_start();
-if (!isset($_SESSION['user'])) {
-    header('Location: login.php');
-    exit();
-}
-?>
 <!DOCTYPE html>
 <html lang="th">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| ระบบบริหารงาน </title>
+    <title>| ระบบจัดการหมู่บ้าน </title>
     <link rel="icon" href="https://devcm.info/img/favicon.png">
-    <link rel="stylesheet" href="./src/style.css">
+    <link rel="stylesheet" href="../../src/style_fix.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -41,7 +34,7 @@ if (!isset($_SESSION['user'])) {
                     <div class="mb-4">
                         <h2 class="text-xs font-bold text-white/80 px-4 mb-2">Menu</h2>
                         <nav class="space-y-2">
-                            <a href="users" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <a href="users.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                                     <polyline points="9 22 9 12 15 12 15 22" />
@@ -49,19 +42,29 @@ if (!isset($_SESSION['user'])) {
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">หน้าหลัก</span>
                             </a>
 
-                            <a href="payment" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <a href="payment.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <rect x="2" y="5" width="20" height="14" rx="2" />
                                     <line x1="2" y1="10" x2="22" y2="10" />
                                 </svg>
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">ชำระค่าส่วนกลาง</span>
                             </a>
-
-                            <a href="#" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <a href="request.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
                                 </svg>
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">การแจ้งซ่อม</span>
+                            </a>
+
+                            <a href="view_request.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                                <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    <line x1="10" y1="9" x2="8" y2="9"></line>
+                                </svg>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">รายละเอียดการแจ้งซ่อม</span>
                             </a>
                         </nav>
                     </div>
@@ -70,14 +73,14 @@ if (!isset($_SESSION['user'])) {
                     <div class="mb-4">
                         <h2 class="text-xs font-bold text-white/80 px-4 mb-2">Others</h2>
                         <nav class="space-y-2">
-                            <a href="edit_profile" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <a href="#" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
                                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                 </svg>
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">แก้ไขโปรไฟล์</span>
                             </a>
 
-                            <a href="logout" class="flex items-center px-4 py-2.5 text-white bg-red-400 hover:bg-red-500 rounded-lg transition-all duration-200">
+                            <a href="../../logout.php" class="flex items-center px-4 py-2.5 text-white bg-red-400 hover:bg-red-500 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
                                     <polyline points="16 17 21 12 16 7"></polyline>
@@ -85,20 +88,19 @@ if (!isset($_SESSION['user'])) {
                                 </svg>
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-250 ease-in-out text-sm whitespace-nowrap">ออกจากระบบ</span>
                             </a>
+
                         </nav>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 
-    <!-- Main Content -->
     <div class="flex-1 ml-20">
         <!-- Top Navigation -->
         <nav class="bg-white shadow-sm px-6 py-3">
             <div class="flex items-center justify-between">
-                <h1 class="text-2xl font-bold text-eva">การแจ้งซ่อม</h1>
+                <h1 class="text-2xl font-bold text-eva">แก้ไขโปรไฟล์</h1>
                 <div class="flex items-center space-x-4">
                     <div class="relative">
                         <button class="p-2 rounded-full hover:bg-gray-100 relative" onclick="toggleNotifications()">
@@ -149,7 +151,6 @@ if (!isset($_SESSION['user'])) {
                             });
                         }
                     </script>
-                    
                     <a href="https://devcm.info" class="p-2 rounded-full hover:bg-gray-100">
                         <img src="https://devcm.info/img/favicon.png" class="h-6 w-6" alt="User icon">
                     </a>
@@ -157,108 +158,119 @@ if (!isset($_SESSION['user'])) {
             </div>
         </nav>
 
-        <!-- Service Request Form -->
-        <div class="container mx-auto px-4 py-5 lg:py-16">
-            <div class="bg-white rounded-xl shadow-lg p-6 max-w-4xl mx-auto">
-                <form action="submit_request.php" method="POST" enctype="multipart/form-data">
-                    <!-- Service Details -->
-                    <div class="mb-8">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                            </svg>
-                            รายละเอียดการแจ้งซ่อม
-                        </h3>
+        <!-- Profile Edit Form -->
+        <div class="container mx-auto px-4 py-5 lg:py-36">
+            <div class="bg-white rounded-xl shadow-lg p-6 max-w-7xl mx-auto">
+                <form action="update_profile.php" method="POST" enctype="multipart/form-data">
+                    <!-- Profile Section -->
+                    <div class="flex flex-col lg:flex-row gap-8">
+                        <!-- Left Side - Profile Image -->
+                        <div class="lg:w-1/4">
+                            <div class="relative">
+                                <img src="https://img5.pic.in.th/file/secure-sv1/user_avatar.png"
+                                    class="w-full aspect-square rounded-xl object-cover shadow-lg border-4 border-blue-500"
+                                    id="preview-image"
+                                    alt="Profile picture">
+                                <label class="absolute bottom-2 right-2 cursor-pointer bg-blue-500 rounded-full p-2 shadow-lg hover:bg-blue-600 transition-colors">
+                                    <svg class="w-4 h-4 text-white" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen-fill" viewBox="0 0 16 16">
+                                        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001" />
+                                    </svg>
+                                    <input type="file" name="profile_image" class="hidden" accept="image/*"
+                                        onchange="document.getElementById('preview-image').src = window.URL.createObjectURL(this.files[0])">
+                                </label>
+                            </div>
+                        </div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <!-- Right Side - Form Fields -->
+                        <div class="lg:w-3/4">
+                            <!-- Personal Info -->
+                            <div class="mb-8">
+                                <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                                    </svg>
+                                    ข้อมูลส่วนตัว
+                                </h3>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">ชื่อ-นามสกุล</label>
+                                        <input type="text" name="fullname"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            value="ทวีศักดิ์ นำมา">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">เบอร์โทรศัพท์</label>
+                                        <input type="tel" name="phone"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            value="081-234-5678">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Address -->
                             <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">ประเภทงานซ่อม</label>
-                                <select name="service_type" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    <option value="">เลือกประเภทงานซ่อม</option>
-                                    <option value="plumbing">ประปา</option>
-                                    <option value="electrical">ไฟฟ้า</option>
-                                    <option value="aircond">แอร์</option>
-                                    <option value="furniture">เฟอร์นิเจอร์</option>
-                                    <option value="other">อื่นๆ</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">ระดับความเร่งด่วน</label>
-                                <select name="urgency" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    <option value="normal">ปกติ</option>
-                                    <option value="urgent">เร่งด่วน</option>
-                                    <option value="emergency">ฉุกเฉิน</option>
-                                </select>
-                            </div>
-
-                            <div class="md:col-span-2">
-                                <label class="block text-sm font-medium text-gray-700 mb-1">รายละเอียดปัญหา</label>
-                                <textarea name="description" rows="4"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    placeholder="กรุณาอธิบายปัญหาที่พบโดยละเอียด"></textarea>
-                            </div>
-
-                            <div class="md:col-span-2">
-                                <label class="block text-sm font-medium text-gray-700 mb-1">รูปภาพประกอบ (ถ้ามี)</label>
-                                <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg">
-                                    <div class="space-y-1 text-center">
-                                        <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
-                                            <path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                        </svg>
-                                        <div class="flex text-sm text-gray-600">
-                                            <label class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500">
-                                                <span class="inline-flex items-center justify-center w-full">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                                    </svg>
-                                                    อัพโหลดรูปภาพ
-                                                </span>
-                                                <input type="file" name="images[]" class="sr-only" multiple accept="image/*">
-                                            </label>
-                                        </div>
-                                        <p class="text-xs text-gray-500">PNG, JPG, GIF ไม่เกิน 10MB</p>
+                                <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                                    </svg>
+                                    ข้อมูลที่อยู่
+                                </h3>
+                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">บ้านเลขที่</label>
+                                        <input type="text" name="house_no"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            value="123/456">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">หมู่บ้าน/อาคาร</label>
+                                        <input type="text" name="village"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            value="Diya Valley">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">ถนน</label>
+                                        <input type="text" name="road"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            value="พหลโยธิน">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">ตำบล/แขวง</label>
+                                        <input type="text" name="subdistrict"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            value="คลองหนึ่ง">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">อำเภอ/เขต</label>
+                                        <input type="text" name="district"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            value="คลองหลวง">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">จังหวัด</label>
+                                        <input type="text" name="province"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            value="ปทุมธานี">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700 mb-1">รหัสไปรษณีย์</label>
+                                        <input type="text" name="postal_code"
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            value="12120">
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Preferred Schedule -->
-                    <div class="mb-8">
-                        <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-                            <svg class="w-5 h-5 mr-2 text-blue-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                                <line x1="16" y1="2" x2="16" y2="6"></line>
-                                <line x1="8" y1="2" x2="8" y2="6"></line>
-                                <line x1="3" y1="10" x2="21" y2="10"></line>
-                            </svg>
-                            วันและเวลาที่สะดวก
-                        </h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">วันที่</label>
-                                <input type="date" name="preferred_date"
-                                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-medium text-gray-700 mb-1">ช่วงเวลา</label>
-                                <select name="preferred_time" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    <option value="morning">เช้า (9:00 - 12:00)</option>
-                                    <option value="afternoon">บ่าย (13:00 - 16:00)</option>
-                                    <option value="evening">เย็น (16:00 - 18:00)</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
                     <!-- Submit Button -->
-                    <div class="flex justify-end">
-                        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transform hover:scale-105 transition-all duration-200 flex items-center">
+                    <div class="mt-8 flex justify-end">
+                        <button type="submit"
+                            class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transform hover:scale-105 transition-all duration-200 flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                             </svg>
-                            ส่งคำขอ
+                            บันทึกข้อมูล
                         </button>
                     </div>
                 </form>
@@ -266,30 +278,31 @@ if (!isset($_SESSION['user'])) {
         </div>
     </div>
 
-    <!-- Add JavaScript before closing body tag -->
+    <!-- เพิ่ม script ก่อน closing body tag -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.querySelector('form');
             form.addEventListener('submit', function(e) {
-                e.preventDefault();
+                e.preventDefault(); // ป้องกันการ submit แบบปกติ
 
+                // สร้าง FormData object
                 const formData = new FormData(this);
 
-                fetch('submit_request.php', {
+                // ส่งข้อมูลด้วย fetch API
+                fetch('update_profile.php', {
                         method: 'POST',
                         body: formData
                     })
                     .then(response => response.json())
                     .then(data => {
                         if (data.status === 'success') {
-                            alert('ส่งคำขอเรียบร้อยแล้ว');
-                            window.location.href = 'requests_history.php';
+                            alert('บันทึกข้อมูลเรียบร้อยแล้ว');
                         } else {
                             alert('เกิดข้อผิดพลาด: ' + data.message);
                         }
                     })
                     .catch(error => {
-                        alert('เกิดข้อผิดพลาดในการส่งคำขอ');
+                        alert('เกิดข้อผิดพลาดในการบันทึกข้อมูล');
                         console.error('Error:', error);
                     });
             });
