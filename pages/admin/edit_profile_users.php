@@ -12,83 +12,97 @@
 
 <body class="bg-modern">
     <div class="flex">
-    <div id="sidebar" class="fixed top-0 left-0 h-full w-20 hover:w-64 group transition-all duration-300 ease-in-out bg-gradient-to-b from-blue-600 to-blue-500 shadow-xl">
-            <div class="flex flex-col h-full">
-                <!-- Profile Section -->
-                <div class="p-4 mb-6">
-                    <div class="flex items-center">
-                        <div class="relative flex-shrink-0">
-                            <img src="https://img5.pic.in.th/file/secure-sv1/img_avatar3.png"
-                                alt="Profile"
-                                class="w-12 h-12 rounded-full border-2 border-white shadow-md hover:scale-105 transition-transform duration-200">
-                        </div>
-                        <div class="ml-4">
-                            <h3 class="text-white font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out whitespace-nowrap">คุณจิรภัทร ป่าไพร</h3>
-                            <p class="text-blue-100 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out whitespace-nowrap">Admin</p>
-                        </div>
+    <div id="sidebar" class="fixed top-0 left-0 h-full w-20 transition-all duration-300 ease-in-out bg-gradient-to-b from-blue-600 to-blue-500 shadow-xl">
+        <button id="toggleSidebar" class="absolute -right-3 top-1/2 transform -translate-y-1/2 bg-blue-800 text-white rounded-full p-1 shadow-lg hover:bg-blue-900">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+        
+        <div class="flex flex-col h-full">
+            <!-- Profile Section -->
+            <div class="p-4 mb-6">
+                <div class="flex items-center">
+                    <div class="relative flex-shrink-0">
+                        <img src="https://img5.pic.in.th/file/secure-sv1/img_avatar3.png"
+                            alt="Profile"
+                            class="w-12 h-12 rounded-full border-2 border-white shadow-md hover:scale-105 transition-transform duration-200">
+                    </div>
+                    <div class="ml-4">
+                        <h3 class="text-white font-semibold text-sm opacity-0 transition-opacity duration-500 ease-in-out whitespace-nowrap">คุณจิรภัทร ป่าไพร</h3>
+                        <p class="text-blue-100 text-xs opacity-0 transition-opacity duration-500 ease-in-out whitespace-nowrap">Admin</p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Menu Section -->
-                <div class="px-3">
-                    <div class="mb-4">
-                        <h2 class="text-xs font-bold text-white/80 px-4 mb-2">Menu</h2>
-                        <nav class="space-y-2">
-                            <a href="admin.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+            <!-- Menu Section -->
+            <div class="px-3">
+                <div class="mb-4">
+                    <h2 class="text-xs font-bold text-white/80 px-4 mb-2">Menu</h2>
+                    <nav class="space-y-2">
+                        <a href="admin.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                <polyline points="9 22 9 12 15 12 15 22" />
+                            </svg>
+                            <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">หน้าหลัก</span>
+                        </a>
+
+                        <a href="payment.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="5" width="20" height="14" rx="2" />
+                                <line x1="2" y1="10" x2="22" y2="10" />
+                            </svg>
+                            <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการค่าส่วนกลาง</span>
+                        </a>
+
+                        <a href="request.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
+                            <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการแจ้งซ่อม</span>
+                        </a>
+
+                        <a href="user_profile.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการข้อมูลผู้ใช้</span>
+                        </a>
+
+                        <a href="permission.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                                    <polyline points="9 22 9 12 15 12 15 22" />
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                                 </svg>
-                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">หน้าหลัก</span>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการสิทธิ์การใช้งาน</span>
                             </a>
+                    </nav>
+                </div>
 
-                            <a href="payment.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
-                                <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="2" y="5" width="20" height="14" rx="2" />
-                                    <line x1="2" y1="10" x2="22" y2="10" />
-                                </svg>
-                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการค่าส่วนกลาง</span>
-                            </a>
+                <!-- Others Section -->
+                <div class="mb-4">
+                    <h2 class="text-xs font-bold text-white/80 px-4 mb-2">Others</h2>
+                    <nav class="space-y-2">
+                        <a href="edit_profile.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                            <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">แก้ไขโปรไฟล์</span>
+                        </a>
 
-                            <a href="request.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
-                                <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                                </svg>
-                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการแจ้งซ่อม</span>
-                            </a>
-                            <a href="user_profile.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
-                                <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                </svg>
-                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการข้อมูลผู้ใช้</span>
-                            </a>
-                        </nav>
-                    </div>
-
-                    <!-- Others Section -->
-                    <div class="mb-4">
-                        <h2 class="text-xs font-bold text-white/80 px-4 mb-2">Others</h2>
-                        <nav class="space-y-2">
-                            <a href="edit_profile.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
-                                <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
-                                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                                </svg>
-                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">แก้ไขโปรไฟล์</span>
-                            </a>
-
-                            <a href="../../logout.php" class="flex items-center px-4 py-2.5 text-white bg-red-400 hover:bg-red-500 rounded-lg transition-all duration-200">
-                                <svg class="w-5 h-5 flex-shrink-0 text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                                    <polyline points="16 17 21 12 16 7"></polyline>
-                                    <line x1="21" y1="12" x2="9" y2="12"></line>
-                                </svg>
-                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-250 ease-in-out text-sm whitespace-nowrap">ออกจากระบบ</span>
-                            </a>
-                        </nav>
-                    </div>
+                        <a href="../../logout.php" class="flex items-center px-4 py-2.5 text-white bg-red-400 hover:bg-red-500 rounded-lg transition-all duration-200">
+                            <svg class="w-5 h-5 flex-shrink-0 text-white transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                                <polyline points="16 17 21 12 16 7"></polyline>
+                                <line x1="21" y1="12" x2="9" y2="12"></line>
+                            </svg>
+                            <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">ออกจากระบบ</span>
+                        </a>
+                        
+                    </nav>
                 </div>
             </div>
         </div>
@@ -110,7 +124,7 @@
                             </svg>
                         </button>
 
-                        <!-- เพิ่มกล่องแจ้งเ���ือนใต้กระดิ่ง -->
+                        <!-- เพิ่มกล่องแจ้งเือนใต้กระดิ่ง -->
                         <div id="notificationDropdown" class="hidden absolute right-0 top-full mt-2 w-80 bg-white rounded-lg shadow-xl z-50">
                             <div class="p-4">
                                 <div class="space-y-4">
@@ -324,6 +338,30 @@
                         console.error('Error:', error);
                     });
             });
+        });
+    </script>
+
+    <!-- เพิ่ม script ควบคุม sidebar -->
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('toggleSidebar');
+        const toggleIcon = toggleBtn.querySelector('svg path');
+        const textElements = document.querySelectorAll('.opacity-0');
+        let isExpanded = false;
+
+        toggleBtn.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+            if (isExpanded) {
+                sidebar.classList.remove('w-20');
+                sidebar.classList.add('w-64');
+                toggleIcon.setAttribute('d', 'M15 19l-7-7 7-7');
+                textElements.forEach(el => el.classList.remove('opacity-0'));
+            } else {
+                sidebar.classList.remove('w-64');
+                sidebar.classList.add('w-20');
+                toggleIcon.setAttribute('d', 'M9 5l7 7-7 7');
+                textElements.forEach(el => el.classList.add('opacity-0'));
+            }
         });
     </script>
 </body>

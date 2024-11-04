@@ -12,7 +12,13 @@
 
 <body class="bg-modern">
     <div class="flex">
-        <div id="sidebar" class="fixed top-0 left-0 h-full w-20 hover:w-64 group transition-all duration-300 ease-in-out bg-gradient-to-b from-blue-600 to-blue-500 shadow-xl">
+        <div id="sidebar" class="fixed top-0 left-0 h-full w-20 transition-all duration-300 ease-in-out bg-gradient-to-b from-blue-600 to-blue-500 shadow-xl">
+            <button id="toggleSidebar" class="absolute -right-3 top-1/2 transform -translate-y-1/2 bg-blue-800 text-white rounded-full p-1 shadow-lg hover:bg-blue-900">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+            
             <div class="flex flex-col h-full">
                 <!-- Profile Section -->
                 <div class="p-4 mb-6">
@@ -23,8 +29,8 @@
                                 class="w-12 h-12 rounded-full border-2 border-white shadow-md hover:scale-105 transition-transform duration-200">
                         </div>
                         <div class="ml-4">
-                            <h3 class="text-white font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out whitespace-nowrap">คุณจิรภัทร ป่าไพร</h3>
-                            <p class="text-blue-100 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out whitespace-nowrap">Admin</p>
+                            <h3 class="text-white font-semibold text-sm opacity-0 transition-opacity duration-500 ease-in-out whitespace-nowrap">คุณจิรภัทร ป่าไพร</h3>
+                            <p class="text-blue-100 text-xs opacity-0 transition-opacity duration-500 ease-in-out whitespace-nowrap">Admin</p>
                         </div>
                     </div>
                 </div>
@@ -65,6 +71,12 @@
                                 </svg>
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการข้อมูลผู้ใช้</span>
                             </a>
+                            <a href="permission.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                                <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการสิทธิ์การใช้งาน</span>
+                            </a>
                         </nav>
                     </div>
 
@@ -99,7 +111,14 @@
         <!-- Top Navigation -->
         <nav class="bg-white shadow-sm px-6 py-3">
             <div class="flex items-center justify-between">
-                <h1 class="text-2xl font-bold text-eva">จัดการค่าส่วนกลาง</h1>
+                <div class="flex items-center">
+                    <button id="toggleSidebar" class="p-2 hover:bg-gray-100 rounded-lg">
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <h1 class="text-2xl font-bold text-eva ml-4">จัดการค่าส่วนกลาง</h1>
+                </div>
                 <div class="flex items-center space-x-4">
                     <div class="relative">
                         <button class="p-2 rounded-full hover:bg-gray-100 relative" onclick="toggleNotifications()">
@@ -228,7 +247,7 @@
         <div class="relative p-5 border w-full max-w-lg shadow-lg rounded-md bg-white mx-4">
             <div class="mt-3">
                 <div class="flex justify-between items-center pb-3">
-                    <h3 class="text-lg leading-6 font-bold text-blue-500">ชำระเงิน</h3>
+                    <h3 class="text-lg leading-6 font-bold text-blue-500">��ำระเงิน</h3>
                     <button onclick="closeModal()" class="text-gray-400 hover:text-gray-500">
                         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -313,56 +332,6 @@
                                     ดูสลิป
                                 </button>
                             </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <p class="font-medium">บ้านเลขที่ 123/11</p>
-                                    <p class="text-sm text-gray-600">นายสมศักดิ์ ใจดี</p>
-                                    <p class="text-xs text-gray-500">ชำระเมื่อ: 01/02/2024 13:20</p>
-                                </div>
-                                <button onclick="showSlipModal('slip3.jpg', 'บ้านเลขที่ 123/11')" class="text-blue-600 hover:text-blue-800 text-sm">
-                                    ดูสลิป
-                                </button>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <p class="font-medium">บ้านเลขที่ 123/12</p>
-                                    <p class="text-sm text-gray-600">นางสาวสุดา รักษ์สกุล</p>
-                                    <p class="text-xs text-gray-500">ชำระเมื่อ: 01/02/2024 14:45</p>
-                                </div>
-                                <button onclick="showSlipModal('slip4.jpg', 'บ้านเลขที่ 123/12')" class="text-blue-600 hover:text-blue-800 text-sm">
-                                    ดูสลิป
-                                </button>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <p class="font-medium">บ้านเลขที่ 123/13</p>
-                                    <p class="text-sm text-gray-600">นายวิชัย สุขสันต์</p>
-                                    <p class="text-xs text-gray-500">ชำระเมื่อ: 01/02/2024 15:30</p>
-                                </div>
-                                <button onclick="showSlipModal('slip5.jpg', 'บ้านเลขที่ 123/13')" class="text-blue-600 hover:text-blue-800 text-sm">
-                                    ดูสลิป
-                                </button>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <p class="font-medium">บ้านเลขที่ 123/14</p>
-                                    <p class="text-sm text-gray-600">นางนิภา ใจงาม</p>
-                                    <p class="text-xs text-gray-500">ชำระเมื่อ: 01/02/2024 16:10</p>
-                                </div>
-                                <button onclick="showSlipModal('slip6.jpg', 'บ้านเลขที่ 123/14')" class="text-blue-600 hover:text-blue-800 text-sm">
-                                    ดูสลิป
-                                </button>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <div>
-                                    <p class="font-medium">บ้านเลขที่ 123/15</p>
-                                    <p class="text-sm text-gray-600">นายธีรพงษ์ มั่นคง</p>
-                                    <p class="text-xs text-gray-500">ชำระเมื่อ: 01/02/2024 17:00</p>
-                                </div>
-                                <button onclick="showSlipModal('slip7.jpg', 'บ้านเลขที่ 123/15')" class="text-blue-600 hover:text-blue-800 text-sm">
-                                    ดูสลิป
-                                </button>
-                            </div>
                         </div>
                     </div>
 
@@ -398,16 +367,46 @@
 
                 <!-- แก้ไข Modal form -->
                 <form class="space-y-6" id="addPaymentForm">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">วันที่ <span class="text-red-500">*</span></label>
-                        <input type="date"
-                            id="paymentDate"
-                            name="paymentDate"
-                            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
-                            required
-                            onchange="validateForm()">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">เดือน <span class="text-red-500">*</span></label>
+                            <select id="paymentMonth" 
+                                name="paymentMonth" 
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                required
+                                onchange="validateForm()">
+                                <option value="">เลือกเดือน</option>
+                                <option value="1">มกราคม</option>
+                                <option value="2">กุมภาพันธ์</option>
+                                <option value="3">มีนาคม</option>
+                                <option value="4">เมษายน</option>
+                                <option value="5">พฤษภาคม</option>
+                                <option value="6">มิถุนายน</option>
+                                <option value="7">กรกฎาคม</option>
+                                <option value="8">สิงหาคม</option>
+                                <option value="9">กันยายน</option>
+                                <option value="10">ตุลาคม</option>
+                                <option value="11">พฤศจิกายน</option>
+                                <option value="12">ธันวาคม</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">ปี <span class="text-red-500">*</span></label>
+                            <select id="paymentYear" 
+                                name="paymentYear" 
+                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                                required
+                                onchange="validateForm()">
+                                <option value="">เลือกปี</option>
+                                <option value="2567">2567</option>
+                                <option value="2568">2568</option>
+                                <option value="2569">2569</option>
+                                <option value="2570">2570</option>
+                            </select>
+                        </div>
                     </div>
 
+                    <!-- ส่วนอื่นๆ ของฟอร์มยังคงเหมือนเดิม -->
                     <div>
                         <label class="block text-sm font-medium text-gray-700 mb-2">จำนวนเงิน (บาท) <span class="text-red-500">*</span></label>
                         <input type="number"
@@ -500,7 +499,7 @@
                             <div class="flex justify-between items-center">
                                 <div>
                                     <p class="font-medium">บ้านเลขที่ 123/5</p>
-                                    <p class="text-sm text-gray-600">นายธีรศักดิ์ ดีงาม</p>
+                                    <p class="text-sm text-gray-600">นายธีรศักดิ์ ดงาม</p>
                                 </div>
                                 <span class="text-red-600 font-medium">500 บาท</span>
                             </div>
@@ -690,12 +689,13 @@
         }
 
         function submitAdd() {
-            const date = document.getElementById('paymentDate').value;
+            const month = document.getElementById('paymentMonth').value;
+            const year = document.getElementById('paymentYear').value;
             const amount = document.getElementById('paymentAmount').value;
             const detail = document.getElementById('paymentDetail').value.trim();
 
             // ตรวจสอบอีกครั้งก่อนส่งข้อมูล
-            if (date && amount > 0 && detail) {
+            if (month && year && amount > 0 && detail) {
                 // จำลองการบันทึกข้อมูล
                 alert('บันทึกข้อมูลเรียบร้อย');
                 closeAddModal();
@@ -703,13 +703,14 @@
         }
 
         function validateForm() {
-            const date = document.getElementById('paymentDate').value;
+            const month = document.getElementById('paymentMonth').value;
+            const year = document.getElementById('paymentYear').value;
             const amount = document.getElementById('paymentAmount').value;
             const detail = document.getElementById('paymentDetail').value.trim();
             const submitButton = document.getElementById('submitButton');
 
             // ตรวจสอบว่ากรอกข้อมูลครบทุกช่องหรือไม่
-            if (date && amount > 0 && detail) {
+            if (month && year && amount > 0 && detail) {
                 // ถ้าครบ เปิดใช้งานปุ่มบันทึก
                 submitButton.disabled = false;
                 submitButton.classList.remove('bg-gray-300', 'text-gray-500', 'cursor-not-allowed');
@@ -749,6 +750,50 @@
         function closePaidModal() {
             document.getElementById('paidModal').classList.add('hidden');
         }
+
+        const sidebar = document.getElementById('sidebar');
+        const toggleSidebarButton = document.getElementById('toggleSidebar');
+        let isSidebarOpen = false;
+
+        toggleSidebarButton.addEventListener('click', () => {
+            isSidebarOpen = !isSidebarOpen;
+            if (isSidebarOpen) {
+                sidebar.classList.remove('w-20');
+                sidebar.classList.add('w-64');
+            } else {
+                sidebar.classList.remove('w-64');
+                sidebar.classList.add('w-20');
+            }
+        });
+
+        // ปิด sidebar เมื่อคลิกนอกพื้นที่
+        document.addEventListener('click', (e) => {
+            if (isSidebarOpen && !sidebar.contains(e.target) && e.target !== toggleSidebarButton) {
+                isSidebarOpen = false;
+                sidebar.classList.remove('w-64');
+                sidebar.classList.add('w-20');
+            }
+        });
+
+        const toggleBtn = document.getElementById('toggleSidebar');
+        const toggleIcon = toggleBtn.querySelector('svg path');
+        const textElements = document.querySelectorAll('.opacity-0');
+        let isExpanded = false;
+
+        toggleBtn.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+            if (isExpanded) {
+                sidebar.classList.remove('w-20');
+                sidebar.classList.add('w-64');
+                toggleIcon.setAttribute('d', 'M15 19l-7-7 7-7');
+                textElements.forEach(el => el.classList.remove('opacity-0'));
+            } else {
+                sidebar.classList.remove('w-64');
+                sidebar.classList.add('w-20');
+                toggleIcon.setAttribute('d', 'M9 5l7 7-7 7');
+                textElements.forEach(el => el.classList.add('opacity-0'));
+            }
+        });
     </script>
 </body>
 

@@ -45,7 +45,7 @@
                                     <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
                                     <polyline points="9 22 9 12 15 12 15 22" />
                                 </svg>
-                                <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">หน้าหลัก</span>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">หน้าหลัก</span>
                             </a>
 
                             <a href="payment.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
@@ -53,27 +53,26 @@
                                     <rect x="2" y="5" width="20" height="14" rx="2" />
                                     <line x1="2" y1="10" x2="22" y2="10" />
                                 </svg>
-                                <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการค่าส่วนกลาง</span>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการค่าส่วนกลาง</span>
                             </a>
 
                             <a href="request.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
                                 </svg>
-                                <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการแจ้งซ่อม</span>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการแจ้งซ่อม</span>
                             </a>
-
-                            <a href="#" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <a href="user_profile.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                                     <circle cx="9" cy="7" r="4"></circle>
                                     <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                                 </svg>
-                                <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการข้อมูลผู้ใช้</span>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการข้อมูลผู้ใช้</span>
                             </a>
 
-                            <a href="permission.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                            <a href="#" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                                 </svg>
@@ -90,7 +89,7 @@
                                 <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
                                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                 </svg>
-                                <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">แก้ไขโปรไฟล์</span>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">แก้ไขโปรไฟล์</span>
                             </a>
 
                             <a href="../../logout.php" class="flex items-center px-4 py-2.5 text-white bg-red-400 hover:bg-red-500 rounded-lg transition-all duration-200">
@@ -99,7 +98,7 @@
                                     <polyline points="16 17 21 12 16 7"></polyline>
                                     <line x1="21" y1="12" x2="9" y2="12"></line>
                                 </svg>
-                                <span class="ml-3 opacity-0 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">ออกจากระบบ</span>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-250 ease-in-out text-sm whitespace-nowrap">ออกจากระบบ</span>
                             </a>
                         </nav>
                     </div>
@@ -113,7 +112,9 @@
         <!-- Top Navigation -->
         <nav class="bg-white shadow-sm px-6 py-3">
             <div class="flex items-center justify-between">
-                <h1 class="text-2xl font-bold text-eva">จัดการข้อมูลผู้ใช้</h1>
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-eva ml-4">จัดการสิทธิ์การใช้งาน</h1>
+                </div>
                 <div class="flex items-center space-x-4">
                     <div class="relative">
                         <button class="p-2 rounded-full hover:bg-gray-100 relative" onclick="toggleNotifications()">
@@ -171,103 +172,176 @@
             </div>
         </nav>
 
-        <!-- Users Table Section -->
+        <!-- Main Content -->
         <div class="p-6">
-            <div class="flex justify-between items-center mb-4">
-                <div>
-                    <h2 class="text-xl font-semibold text-gray-800">รายชื่อผู้ใช้ทั้งหมด</h2>
-                    <p class="text-sm text-gray-500 mt-1">จำนวนผู้ใช้: 15 คน</p>
-                </div>
-                <a href="add_users.php" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg flex items-center">
+            <!-- หัวข้อและปุ่มเพิ่มสิทธิ์ -->
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-xl font-semibold text-gray-800">รายการสิทธิ์การใช้งาน</h2>
+                <button onclick="showAddModal()" 
+                    class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
                     </svg>
-                    เพิ่มผู้ใช้
-                </a>
+                    เพิ่มสิทธิ์ใหม่
+                </button>
             </div>
 
-            <!-- ตารางแสดงข้อมูล -->
-            <div class="bg-white rounded-lg shadow-sm">
-                <div class="overflow-x-auto">
-                    <table class="min-w-full divide-y divide-gray-200">
-                        <thead class="bg-gray-50">
-                            <tr>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">บ้านเลขที่</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">ชื่อ-นามสกุล</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">อีเมล</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">เบอร์โทร</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">สถานะ</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">สิทธิ์การใช้งาน</th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">การกระทำ</th>
-                            </tr>
-                        </thead>
-                        <tbody class="bg-white divide-y divide-gray-200">
-                            <tr class="hover:bg-gray-50">
-                                <td class="px-6 py-4 whitespace-nowrap text-sm">123/1</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm">นายสมชาย ใจดี</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm">somchai@email.com</td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm">081-234-5678</td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                                        ปกติ
-                                    </span>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap">
-                                    <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800">
-                                        ผู้ดูแลระบบ
-                                    </span>
-                                </td>
-                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                                    <a href="edit_profile_users.php?id=1" class="text-blue-600 hover:text-blue-900 mr-3 inline-flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
-                                        </svg>
-                                        แก้ไข
-                                    </a>
-                                    <button onclick="confirmDelete('1')" class="text-red-600 hover:text-red-900 inline-flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd" />
-                                        </svg>
-                                        ลบ
-                                    </button>
-                                </td>
-                            </tr>
-                            <!-- เพิ่มแถวข้อมูลตามต้องการ -->
-                        </tbody>
-                    </table>
-                </div>
+            <!-- ตารางแสดงสิทธิ์ -->
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ชื่อสิทธิ์</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">เมนูที่เข้าถึงได้</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">จำนวนผู้ใช้</th>
+                            <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">จัดการ</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm font-medium text-gray-900">ผู้ดูแลระบบ</div>
+                            </td>
+                            <td class="px-6 py-4">
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded">หน้าหลัก</span>
+                                    <span class="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded">จัดการค่าส่วนกลาง</span>
+                                    <span class="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded">จัดการแจ้งซ่อม</span>
+                                    <span class="px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded">จัดการข้อมูลผู้ใช้</span>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="text-sm text-gray-900">2 คน</div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                <button onclick="showEditModal('admin')" class="text-blue-600 hover:text-blue-900 mr-4">แก้ไข</button>
+                                <button onclick="confirmDelete('admin')" class="text-red-600 hover:text-red-900">ลบ</button>
+                            </td>
+                        </tr>
+                        <!-- เพิ่มแถวอื่นๆ ตามต้องการ -->
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
 
+    <!-- Modal เพิ่ม/แก้ไขสิทธิ์ -->
+    <div id="permissionModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50">
+        <div class="relative top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5 border w-full max-w-xl shadow-lg rounded-md bg-white">
+            <div class="flex justify-between items-center pb-3">
+                <h3 class="text-xl font-bold text-gray-900" id="modalTitle">เพิ่มสิทธิ์ใหม่</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-gray-500">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <form id="permissionForm" class="mt-4">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        ชื่อสิทธิ์ <span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="permissionName" name="permissionName" required
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500">
+                </div>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        เมนูที่สามารถเข้าถึง <span class="text-red-500">*</span>
+                    </label>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="menus[]" value="dashboard" class="rounded text-blue-600">
+                            <span class="ml-2 text-sm text-gray-700">หน้าหลัก</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="menus[]" value="payment" class="rounded text-blue-600">
+                            <span class="ml-2 text-sm text-gray-700">จัดการค่าส่วนกลาง</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="menus[]" value="repair" class="rounded text-blue-600">
+                            <span class="ml-2 text-sm text-gray-700">จัดการแจ้งซ่อม</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" name="menus[]" value="users" class="rounded text-blue-600">
+                            <span class="ml-2 text-sm text-gray-700">จัดการข้อมูลผู้ใช้</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="flex justify-end space-x-3">
+                    <button type="button" onclick="closeModal()"
+                        class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400">
+                        ยกเลิก
+                    </button>
+                    <button type="submit"
+                        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                        บันทึก
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- เพิ่ม Script -->
     <script>
-        function confirmDelete(userId) {
-            if (confirm('คุณต้องการลบข้อมูลผู้ใช้นี้ใช่หรือไม่?')) {
-                // TODO: ส่งคำขอลบข้อมูลไปยัง API
-                alert('ลบข้อมูลเรียบร้อย');
-            }
+    function showAddModal() {
+        document.getElementById('modalTitle').textContent = 'เพิ่มสิทธิ์ใหม่';
+        document.getElementById('permissionForm').reset();
+        document.getElementById('permissionModal').classList.remove('hidden');
+    }
+
+    function showEditModal(id) {
+        document.getElementById('modalTitle').textContent = 'แก้ไขสิทธิ์';
+        // โห���ดข้อมูลส���ทธิ์ที่ต้องการแก้ไข
+        document.getElementById('permissionModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+        document.getElementById('permissionModal').classList.add('hidden');
+    }
+
+    function confirmDelete(id) {
+        if (confirm('คุณต้องการลบสิทธิ์นี้ใช่หรือไม่?')) {
+            // ดำเนินการลบสิทธิ์
+            alert('ลบสิทธิ์เรียบร้อยแล้ว');
         }
+    }
 
-        const sidebar = document.getElementById('sidebar');
-        const toggleBtn = document.getElementById('toggleSidebar');
-        const toggleIcon = toggleBtn.querySelector('svg path');
-        const textElements = document.querySelectorAll('.opacity-0');
-        let isExpanded = false;
+    document.getElementById('permissionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        // ตรวจสอบว่าเลือกเมนูอย่างน้อย 1 รายการ
+        const selectedMenus = document.querySelectorAll('input[name="menus[]"]:checked');
+        if (selectedMenus.length === 0) {
+            alert('กรุณาเลือกเมนูที่สามารถเข้าถึงอย่างน้อย 1 รายการ');
+            return;
+        }
+        // ดำเนินการบันทึกข้อมูล
+        alert('บันทึกข้อมูลเรียบร้อย');
+        closeModal();
+    });
 
-        toggleBtn.addEventListener('click', () => {
-            isExpanded = !isExpanded;
-            if (isExpanded) {
-                sidebar.classList.remove('w-20');
-                sidebar.classList.add('w-64');
-                toggleIcon.setAttribute('d', 'M15 19l-7-7 7-7');
-                textElements.forEach(el => el.classList.remove('opacity-0'));
-            } else {
-                sidebar.classList.remove('w-64');
-                sidebar.classList.add('w-20');
-                toggleIcon.setAttribute('d', 'M9 5l7 7-7 7');
-                textElements.forEach(el => el.classList.add('opacity-0'));
-            }
-        });
+    const sidebar = document.getElementById('sidebar');
+    const toggleBtn = document.getElementById('toggleSidebar');
+    const toggleIcon = toggleBtn.querySelector('svg path');
+    const textElements = document.querySelectorAll('.opacity-0');
+    let isExpanded = false;
+
+    toggleBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+        if (isExpanded) {
+            sidebar.classList.remove('w-20');
+            sidebar.classList.add('w-64');
+            toggleIcon.setAttribute('d', 'M15 19l-7-7 7-7');
+            textElements.forEach(el => el.classList.remove('opacity-0'));
+        } else {
+            sidebar.classList.remove('w-64');
+            sidebar.classList.add('w-20');
+            toggleIcon.setAttribute('d', 'M9 5l7 7-7 7');
+            textElements.forEach(el => el.classList.add('opacity-0'));
+        }
+    });
     </script>
 </body>
 

@@ -38,7 +38,14 @@ if (!isset($_SESSION['user'])) {
     </script>
 
     <div class="flex">
-        <div id="sidebar" class="fixed top-0 left-0 h-full w-20 hover:w-64 group transition-all duration-300 ease-in-out bg-gradient-to-b from-blue-600 to-blue-500 shadow-xl">
+        <div id="sidebar" class="fixed top-0 left-0 h-full w-20 transition-all duration-300 ease-in-out bg-gradient-to-b from-blue-600 to-blue-500 shadow-xl">
+            <!-- เพิ่มปุ่ม toggle ที่ตรงกลาง -->
+            <button id="toggleSidebar" class="absolute -right-3 top-1/2 transform -translate-y-1/2 bg-blue-800 text-white rounded-full p-1 shadow-lg hover:bg-blue-900">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+            
             <div class="flex flex-col h-full">
                 <!-- Profile Section -->
                 <div class="p-4 mb-6">
@@ -49,8 +56,8 @@ if (!isset($_SESSION['user'])) {
                                 class="w-12 h-12 rounded-full border-2 border-white shadow-md hover:scale-105 transition-transform duration-200">
                         </div>
                         <div class="ml-4">
-                            <h3 class="text-white font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out whitespace-nowrap">คุณจิรภัทร ป่าไพร</h3>
-                            <p class="text-blue-100 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out whitespace-nowrap">Admin</p>
+                            <h3 class="text-white font-semibold text-sm opacity-0 transition-opacity duration-500 ease-in-out whitespace-nowrap">คุณจิรภัทร ป่าไพร</h3>
+                            <p class="text-blue-100 text-xs opacity-0 transition-opacity duration-500 ease-in-out whitespace-nowrap">Admin</p>
                         </div>
                     </div>
                 </div>
@@ -90,6 +97,13 @@ if (!isset($_SESSION['user'])) {
                                     <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                                 </svg>
                                 <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการข้อมูลผู้ใช้</span>
+                            </a>
+
+                            <a href="permission.php" class="flex items-center px-4 py-2.5 text-white hover:bg-white/10 rounded-lg transition-all duration-200">
+                                <svg class="w-5 h-5 flex-shrink-0 text-white/80 transition-colors" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                </svg>
+                                <span class="ml-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out text-sm whitespace-nowrap">จัดการสิทธิ์การใช้งาน</span>
                             </a>
                         </nav>
                     </div>
@@ -251,6 +265,30 @@ if (!isset($_SESSION['user'])) {
             </div>
         </div>
     </div>
+
+    <!-- เพิ่ม script สำหรับ toggle ก่อนปิด body tag -->
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('toggleSidebar');
+        const toggleIcon = toggleBtn.querySelector('svg path');
+        const textElements = document.querySelectorAll('.opacity-0');
+        let isExpanded = false;
+
+        toggleBtn.addEventListener('click', () => {
+            isExpanded = !isExpanded;
+            if (isExpanded) {
+                sidebar.classList.remove('w-20');
+                sidebar.classList.add('w-64');
+                toggleIcon.setAttribute('d', 'M15 19l-7-7 7-7');
+                textElements.forEach(el => el.classList.remove('opacity-0'));
+            } else {
+                sidebar.classList.remove('w-64');
+                sidebar.classList.add('w-20');
+                toggleIcon.setAttribute('d', 'M9 5l7 7-7 7');
+                textElements.forEach(el => el.classList.add('opacity-0'));
+            }
+        });
+    </script>
 </body>
 
 </html>
