@@ -11,6 +11,9 @@
 - Tailwind CSS
 - JavaScript
 
+## Installation
+- git clone https://github.com/tydevilish/diya-valley.git
+
 ## Database Create
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
