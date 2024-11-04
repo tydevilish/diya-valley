@@ -12,7 +12,7 @@ if (isset($_SESSION['user'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>| ระบบบริหารงาน </title>
+    <title>| ระบบจัดการหมู่บ้าน </title>
     <link rel="icon" href="https://devcm.info/img/favicon.png">
     <link rel="stylesheet" href="./src/style_fix.css">
     <script src="https://cdn.tailwindcss.com"></script>
